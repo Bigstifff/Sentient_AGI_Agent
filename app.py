@@ -8,4 +8,12 @@ Session(app)
 
 @app.route("/", methods = ["GET", "POST"])
 def index():
-    render_template("home.html")
+    if not session.get("enter"):
+        return redirect("/landing")
+    return render_template("home.html")
+
+@app.route("/landing", methods = ["GET", "POST"])
+def landing():
+    if request.method == "POST":
+        session["enter"] = request.form.get("enter")
+    return render_template("landing.html")

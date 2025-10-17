@@ -1,0 +1,12 @@
+*, html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.greet {
+    background-color: blue;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+}
