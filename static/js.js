@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    if (document.body.id === "layout.html") {
+    if (document.body.id === "layout") {
         
     }
 })

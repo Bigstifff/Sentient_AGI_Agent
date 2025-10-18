@@ -10,10 +10,14 @@ Session(app)
 def index():
     if not session.get("enter"):
         return redirect("/landing")
-    return render_template("home.html")
+    return render_template("home.html", page_id = "home")
 
 @app.route("/landing", methods = ["GET", "POST"])
 def landing():
     if request.method == "POST":
-        session["enter"] = request.form.get("enter")
-    return render_template("landing.html")
+        session["enter"] = request.form.get("q")
+        return redirect("/")
+    return render_template("landing.html", page_id = "landing")
+
+if __name__ == "__main__":
+    app.run(port=8000, use_reloader=True, debug=True, reloader_type="watchdog")

@@ -3,7 +3,23 @@
 {% block body %}
 
     <header>
-        <div class="greet">Hello dear, welcome</div>
+        <div class="greet">Hello dear,</div>
     </header>
+    <main>
+        <div class="section_1">
+            <div class="lContent">
+                <h2>Your AI Research Partner for Defi</h2>
+                <div class="textBody"><span>Analyze yield farms, compare tokens,</span><span>and track protocols; in seconds.</span><span>Powered by Sentient.</span></div>
+                <div class="entry">
+                    <form action="/landing" method="post">
+                        <input name="q" type="hidden" value="enter">
+                        <input class="enter" type="submit" value="Launch Agent">
+                    </form>
+                    <a href="#" class="learnAnchor"><div class="learn">Learn More</div></a>
+                </div>
+            </div>
+            <div class="robo"><img src="{{ url_for('static', filename='images/chart_robo_w .png') }}" alt="robo_agent"></div>
+        </div>
+    </main>
 
 {% endblock %}

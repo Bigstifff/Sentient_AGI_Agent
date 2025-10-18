@@ -8,7 +8,7 @@
         <script src="{{ url_for('static', filename='js.js') }}"></script>
         <title>Crpto Agent</title>
     </head>
-    <body>
+    <body id="{{ page_id }}">
         {% block body %}{% endblock %}
     </body>
 </html>
