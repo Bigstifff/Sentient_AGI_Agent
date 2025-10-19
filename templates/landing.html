@@ -4,22 +4,72 @@
 
     <header>
         <div class="greet">Hello dear,</div>
+        <h2>I'm RoboX</h2>
     </header>
     <main>
         <div class="section_1">
             <div class="lContent">
                 <h2>Your AI Research Partner for Defi</h2>
-                <div class="textBody"><span>Analyze yield farms, compare tokens,</span><span>and track protocols; in seconds.</span><span>Powered by Sentient.</span></div>
+                <div class="textBody"><span>Analyze yield farms, compare tokens,</span><span>and track protocols in seconds.</span><span>Powered by Sentient.</span></div>
                 <div class="entry">
                     <form action="/landing" method="post">
                         <input name="q" type="hidden" value="enter">
                         <input class="enter" type="submit" value="Launch Agent">
                     </form>
-                    <a href="#" class="learnAnchor"><div class="learn">Learn More</div></a>
+                    <a href="https://www.sentient.xyz/" class="learnAnchor"><div class="learn">Learn More</div></a>
                 </div>
             </div>
             <div class="robo"><img src="{{ url_for('static', filename='images/chart_robo_w .png') }}" alt="robo_agent"></div>
         </div>
+        <div class="section_2">
+            <div class="s2Header">How It Works</div>
+            <div class="s2Grid">
+                <div class="hiwS">
+                    <div class="s2Text">
+                        <img src="{{ url_for('static', filename='icons/talk_w.png') }}" alt="talk_icon">
+                        <div class="innerH">Ask Anything</div>
+                        <div>Type any DeFi-related question.</div>
+                    </div>
+                </div>
+                <div class="hiwS">
+                    <div class="s2Text">
+                        <img src="{{ url_for('static', filename='icons/chart_w.png') }}" alt="chart_icon">
+                        <div class="innerH">Get Research-Grade Insights</div>
+                        <div>Instantly access analytics and data from trusted DeFi sources.</div>
+                    </div>
+                </div>
+                <div class="hiwS">
+                    <div class="s2Text">
+                        <img src="{{ url_for('static', filename='icons/secured_w.png') }}" alt="security_icon">
+                        <div class="innerH">Stay Anonymous</div>
+                        <div>No wallet, no login, no tracking</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section_3">
+            <div class="s2Header">Features</div>
+            <div class="s3Grid">
+                <div class="fS">
+                    <div class="innerH">Compare Yield Farms</div>
+                </div>
+                <div class="fS">
+                    <div class="innerH">On-Chain Data Analytics</div>
+                </div>
+                <div class="fS">
+                    <div class="innerH">Token Intelligence</div>
+                </div>
+                <div class="fS">
+                    <div class="innerH">Instant, No Wallet Required</div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <a href="https://x.com/LMT_DAO"><div><img src="{{ url_for('static', filename='icons/twitter_w.png') }}" alt="twitter_logo"><span>LMT Twitter/X</span></div></a>
+            <a href="https://discord.gg/86HRW8tc"><div><img src="{{ url_for('static', filename='icons/dc_w.png') }}" alt="discord_logo"><span>LMT Discord</span></div></a>
+        </footer>
+        <div class="sponsor"><img src="{{ url_for('static', filename='images/lmt_w.png') }}" alt="lmt_logo"><span>LMT Affiliated Project</span></div>
+        <div>&copy; 2025, LMT All Rights Reserved</div>
     </main>
 
 {% endblock %}
