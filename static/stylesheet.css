@@ -224,3 +224,114 @@ footer div:hover {
         margin: auto;
     }
 }
+/* main page styling */
+.agentMain {
+    padding: 10px;
+}
+.chatCont {
+    outline: 1px solid lightgray;
+    height: fit-content;
+}
+.chatCont .chatHeader {
+    background-color: rgb(82, 82, 255);
+    color: white;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.chatCont .chatHeader div {
+    font-size: smaller;
+    padding: 3px;
+    font-weight: bold;
+    color: rgba(28, 28, 247, 0.452);
+    background-color: white;
+}
+.chatCont .chatHeader + div {
+    outline: 1px solid green;
+    margin: 5px;
+    border-radius: 5px;
+    height: 400px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+.roboText img {
+    width: 40px;
+    height: 40px;
+}
+.roboText {
+    display: flex;
+}
+.roboText .textArea {
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    border: 1px solid lightblue;
+    font-size: small;
+}
+.chatArea {
+    width: 80%;
+}
+.userText {
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    border: 0.5px solid blue;
+    font-size: small;
+    background-color: lightblue;
+    margin-left: auto;
+}
+.userArea {
+    padding: 2px;
+    width: 80%;
+    margin-left: auto;
+}
+#querry {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 5px;
+    justify-content: space-around;
+}
+#querry input {
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgb(82, 82, 255);
+}
+#querry button {
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: small;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 128, 0, 0.651);
+    background-color: rgba(0, 128, 0, 0.603);
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#querry button:hover {
+    background-color: green;
+}
+.suggest {
+    display: flex;
+    flex-flow: row wrap;
+    width: 300px;
+}
+.suggest div {
+    width: fit-content;
+    padding: 10px;
+    margin: 3px;
+    outline: 1px solid lightblue;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.suggest div:hover {
+    background-color: lightblue;
+}

@@ -5,8 +5,37 @@
     <header>
         <div class="greet">Welcome</div>
     </header>
-    <main>
-        <i>Come back later, this page is under constructon...</i>
+    <main class="agentMain">
+        <div class="chatCont">
+            <div class="chatHeader"><h2>DeFi Research Agent</h2><div>Powered by Sentient</div></div>
+            <div>
+                <div class="chatArea">
+                <div class="roboText">
+                    <img src="{{ url_for('static', filename='images/robo_pfp_w.png') }}" alt="robo_pfp">
+                    <div class="textArea">Hey there 👋 what do you want to explore today?</div>
+                </div>
+                </div>
+                <div class="userArea">
+                    <div class="userText">Compare LSTs</div>
+                </div>
+            </div>
+            <form id="querry" action="#" method="post">
+                <input type="text" name="q" autofocus placeholder="Ask about any DeFi protocol or token..." autocomplete="off">
+                <button type="submit">Querry</button>
+            </form>
+            <div class="suggest">
+                <div>What is crypto?</div>
+                <div>Why is the market down today?</div>
+                <div>Gas trends</div>
+                <div>Top yield farms</div>
+            </div>
+        </div>
     </main>
+    <footer>
+        <a href="https://x.com/LMT_DAO"><div><img src="{{ url_for('static', filename='icons/twitter_w.png') }}" alt="twitter_logo"><span>LMT Twitter/X</span></div></a>
+        <a href="https://discord.gg/86HRW8tc"><div><img src="{{ url_for('static', filename='icons/dc_w.png') }}" alt="discord_logo"><span>LMT Discord</span></div></a>
+    </footer>
+    <div class="sponsor"><img src="{{ url_for('static', filename='images/lmt_w.png') }}" alt="lmt_logo"><span>LMT Affiliated Project</span></div>
+    <div>&copy; 2025, LMT All Rights Reserved</div>
 
 {% endblock %}
