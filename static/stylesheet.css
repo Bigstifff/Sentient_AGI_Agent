@@ -247,7 +247,7 @@ footer div:hover {
     color: rgba(28, 28, 247, 0.452);
     background-color: white;
 }
-.chatCont .chatHeader + div {
+.chatCont .chatHeader + .chatArea {
     outline: 1px solid green;
     margin: 5px;
     border-radius: 5px;
@@ -255,9 +255,14 @@ footer div:hover {
     overflow-y: auto;
     scroll-behavior: smooth;
 }
-.roboText img {
+.roboText img:nth-child(2) {
     width: 40px;
     height: 40px;
+}
+.roboText .gif {
+    width: 50px;
+    height: 50px;
+    display: none;
 }
 .roboText {
     display: flex;
@@ -270,10 +275,7 @@ footer div:hover {
     border: 1px solid lightblue;
     font-size: small;
 }
-.chatArea {
-    width: 80%;
-}
-.userText {
+.chatArea .userText {
     width: fit-content;
     padding: 10px;
     border-radius: 5px;

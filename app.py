@@ -19,5 +19,11 @@ def landing():
         return redirect("/")
     return render_template("landing.html", page_id = "landing")
 
+@app.route("/testing")
+def testing():
+    name = request.args.get("q")
+
+    return jsonify({"msg": f"Hello, {name} nice to meet you"})
+
 if __name__ == "__main__":
     app.run(port=8000, use_reloader=True, debug=True, reloader_type="watchdog")
