@@ -26,16 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log(queryText)
             input.value = "";
 
-            let payload = {
-                query: queryText
-            };
-
-            try {
-                let response = await fetch("/testing?q=" + queryText);
-                let data = await response.json();
-                console.log(data.msg);
-
-                let userArea = document.createElement("div");
+            let userArea = document.createElement("div");
                 userArea.classList.add("userArea");
                 let userText = document.createElement("div");
                 userText.classList.add("userText");
@@ -51,6 +42,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 userArea.appendChild(userText);
                 chatArea.appendChild(userArea);
                 chatArea.appendChild(roboText);
+                chatArea.scrollTop = chatArea.scrollHeight;
+
+            let payload = {
+                q: queryText
+            };
+
+            try {
+                let response = await fetch("/chat", {
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    method: "POST",
+                    body: JSON.stringify(payload)
+                });
+                let data = await response.json();
+                console.log(data.msg);
 
                 setTimeout(() => {
                     gif.style.display = "none";
@@ -59,11 +66,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     roboText.appendChild(img);
                     let textArea = document.createElement("div");
                     textArea.classList.add("textArea");
-                    textArea.textContent = data.msg;
+                    textArea.innerHTML = data.msg;
                     roboText.appendChild(textArea);
+                    chatArea.scrollTop = chatArea.scrollHeight;
                 }, 2000);
-
-
             }
             catch (error) {
                 console.log(error)
